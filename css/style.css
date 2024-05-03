@@ -133,6 +133,7 @@ header nav .header__button .header__logo {
 header.active .nav__menu {
     transform: translateX(12rem);
 }
+
 header.active .nav__menu::before {
     box-shadow: 0 0px var(--color-second);
     transform: translateY(0px) rotate(45deg);
@@ -151,6 +152,7 @@ header.down {
     background: transparent;
     backdrop-filter: blur(35px);
 }
+
 /* navbar active */
 header.active nav ul {
     right: 0;
@@ -161,6 +163,8 @@ header.active nav ul {
 section {
     width: 100%;
     height: 100vh;
+    opacity: 0;
+    transition: opacity .9s;
 }
 
 .home {
@@ -566,43 +570,55 @@ section {
     .home__text h2 {
         font-size: 4rem;
     }
+
     .about__container {
         justify-content: center;
     }
+
     .about__img {
         position: absolute;
         width: 550px;
         display: block;
     }
+
     .about__container:hover img {
         filter: brightness(50%) blur(20px);
     }
+
     .about__text {
         z-index: 100;
         text-align: center;
         align-items: center;
     }
+
     .trip__box__container {
         margin-top: 2rem;
         grid-template-columns: 1fr 1fr;
     }
 }
+
 /* small devices */
 @media screen and (max-width: 480px) {
     .home__text h2 {
         font-size: 3rem;
         line-height: 1.2em;
     }
+
     .trip__box__container {
         grid-template-columns: 1fr;
     }
 }
+
 /* big devices */
 @media screen and (max-width: 1450px) {
     .home__text h2 {
         line-height: 1.2em;
     }
+
     .about .img__random {
         display: none;
     }
+}
+.anim {
+    opacity: 1;
 }
