@@ -163,15 +163,13 @@ header.active nav ul {
 section {
     width: 100%;
     height: 100vh;
-    opacity: 0;
-    transition: opacity .9s;
 }
 
 .home {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/ReponsivePortfolioV2/img/home.jpg');
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/home.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -190,6 +188,12 @@ section {
     font-size: 20px;
     font-weight: 700;
     color: var(--color-third);
+    transition: 200ms;
+    transform: translateX(-100%);
+}
+
+.home__text h1.anim {
+    transform: translateX(0);
 }
 
 .home__text h2 {
@@ -198,6 +202,12 @@ section {
     font-weight: 800;
     color: var(--color-text);
     margin-top: 1rem;
+    transition: 400ms;
+    transform: translateX(-100%);
+}
+
+.home__text h2.anim {
+    transform: translateX(0);
 }
 
 .home__text p {
@@ -206,6 +216,12 @@ section {
     color: var(--color-first);
     margin-top: 2rem;
     line-height: 1.5em;
+    transition: 600ms;
+    transform: translateX(-100%);
+}
+
+.home__text p.anim {
+    transform: translateX(0);
 }
 
 .home__button {
@@ -221,6 +237,12 @@ section {
     background: transparent;
     border-color: var(--color-third);
     transition: .5s;
+    transition: 800ms;
+    transform: translateX(-100%);
+}
+
+.home__button a.anim {
+    transform: translateX(0);
 }
 
 .home__button a:hover {
@@ -248,33 +270,34 @@ section {
     border-radius: 50%;
     filter: brightness(50%);
     overflow: hidden;
+    transition: .8s;
 }
 
-.about .img__random:nth-child(1) {
+.about .img__random.anim:nth-child(1) {
     margin-bottom: 17rem;
 }
 
-.about .img__random:nth-child(2) {
+.about .img__random.anim:nth-child(2) {
     margin-bottom: 31rem;
     margin-left: 40rem;
 }
 
-.about .img__random:nth-child(3) {
+.about .img__random.anim:nth-child(3) {
     margin-bottom: 25rem;
     margin-left: 70rem;
 }
 
-.about .img__random:nth-child(4) {
+.about .img__random.anim:nth-child(4) {
     margin-top: 29rem;
     margin-left: 29rem;
 }
 
-.about .img__random:nth-child(5) {
+.about .img__random.anim:nth-child(5) {
     margin-top: 22rem;
     margin-left: 60rem;
 }
 
-.about .img__random:nth-child(6) {
+.about .img__random.anim:nth-child(6) {
     margin-top: 23rem;
 }
 
@@ -303,7 +326,12 @@ section {
     height: 720px;
     filter: brightness(50%);
     border-radius: 5px;
-    transition: .5s;
+    transition: .5s, opacity .6s;
+    opacity: 0;
+}
+
+.about__img.anim {
+    opacity: 1;
 }
 
 .about__img:hover {
@@ -316,6 +344,12 @@ section {
     flex-direction: column;
     justify-content: start;
     align-items: end;
+    transform: translateX(500px);
+    transition: .8s;
+}
+
+.about__text.anim {
+    transform: translateX(0%);
 }
 
 .about__text h1 {
@@ -343,6 +377,7 @@ section {
     justify-content: space-evenly;
     align-items: center;
     height: max-content;
+    overflow: hidden;
 }
 
 .trip__title {
@@ -350,6 +385,14 @@ section {
     font-size: 33px;
     font-weight: 800;
     color: var(--color-text);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 1s, opacity 2s;
+}
+
+.trip__title.anim {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .trip__title span {
@@ -363,6 +406,13 @@ section {
     align-items: center;
     column-gap: 2rem;
     row-gap: 2rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 1s, opacity 2s;
+}
+.trip__box__container.anim {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .trip__box {
@@ -449,8 +499,12 @@ section {
     font-size: 3rem;
     font-weight: 800;
     color: var(--color-text);
+    transform: translateX(-500%);
+    transition: .8s;
 }
-
+.contact.anim h1 {
+    transform: translateX(0);
+}
 .contact h1 span {
     color: var(--color-third);
 }
@@ -471,11 +525,16 @@ section {
     color: var(--color-third);
     background: transparent;
     border: none;
+    transform: translatex(-1000%);
+}
+.contact__input.anim input {
+    transform: translateX(0);
+    transition: .6s;
 }
 
 .contact__input input:nth-child(3) {
     border: 2px solid var(--color-third);
-    transition: .5s;
+    transition: .5s, transform .4s;
 }
 
 .contact__input input:nth-child(3):hover {
@@ -618,7 +677,4 @@ section {
     .about .img__random {
         display: none;
     }
-}
-.anim {
-    opacity: 1;
 }

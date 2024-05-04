@@ -23,5 +23,5 @@ const observer = new IntersectionObserver((entries) => {
     })
 })
 
-const section = document.querySelectorAll('section')
-section.forEach((el) => observer.observe(el))
+const hidden = document.querySelectorAll('.hidden')
+hidden.forEach((el) => observer.observe(el))
